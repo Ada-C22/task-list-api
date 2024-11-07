@@ -30,3 +30,6 @@ Be sure to grab the URL of your deployed app. It will be submitted at the time o
     - Use the Render logs
     - Research error messages
     - Rubber duck and ask for help
+
+
+<!-- https://medium.com/@acharyaaarush879/deploy-your-flask-app-on-render-c452a7406fb2 -->

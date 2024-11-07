@@ -1,4 +1,4 @@
-# Setup
+<!-- # Setup
 
 ## Goal
 
@@ -57,9 +57,9 @@ SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://postgres:postgres@localhost:5432/t
 SQLALCHEMY_TEST_DATABASE_URI=postgresql+psycopg2://postgres:postgres@localhost:5432/task_list_api_test
 ```
 
-## Run `$ flask db init`
+## Run `$ flask db init` -->
 
-Run `$ flask db init`.
+<!-- Run `$ flask db init`. -->
 
 **_After you make your first model in Wave 1_**, run the other commands `migrate` and `upgrade`.
 

@@ -1,12 +1,15 @@
-from flask import Flask
-from .db import db, migrate
-from .models import task, goal
 import os
+from flask import Flask
+from app.routes.task_routes import task_bp
+from app.routes.goal_routes import goal_bp
+from app.models import task, goal
+from .db import db, migrate
 
 def create_app(config=None):
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    # app.config['SQLALCHEMY_DATABASE_URI']='postgresql+psycopg2://postgres:postgres@localhost:5432/task_list_api_development'
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 
     if config:
@@ -18,5 +21,7 @@ def create_app(config=None):
     migrate.init_app(app, db)
 
     # Register Blueprints here
+    app.register_blueprint(task_bp)
+    app.register_blueprint(goal_bp)
 
     return app
