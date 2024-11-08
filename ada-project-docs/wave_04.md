@@ -193,4 +193,4 @@ Send `PATCH` requests to `localhost:5000/tasks/<task_id>/mark_complete` (use the
 
 ![](assets/postman_patch.png)
 
-![](assets/slack_notification_feature.png)
+![](assets/slIntegack_notification_feature.png)
