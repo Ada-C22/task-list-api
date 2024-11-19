@@ -77,7 +77,7 @@ def three_tasks(app):
 def completed_task(app):
     new_task = Task(title="Go on my daily walk 🏞", 
                     description="Notice something new every day", 
-                    completed_at=datetime.utcnow())
+                    completed_at=datetime.now())
     db.session.add(new_task)
     db.session.commit()
 
