@@ -27,7 +27,7 @@ Tasks should contain these attributes. **The tests require the following columns
 
 ### Tips
 
-- To work with date information, we can import the `datetime` data type with the import line `from datetime import datetime`. 
+- To work with date information, we can import the `datetime` data type with the import line `from datetime import datetime`.
 - SQLAlchemy supports optional, or _nullable_, columns with specific syntax.
 - Don't forget to run:
   - `flask db init` once during setup
@@ -50,7 +50,7 @@ Tasks should contain these attributes. **The tests require the following columns
 
 ### CLI
 
-In addition to testing your code with pytest and postman, you can play test your code with the CLI (Command Line Interface) by running `python3 cli/main.py`. 
+In addition to testing your code with pytest and postman, you can play test your code with the CLI (Command Line Interface) by running `python3 cli/main.py`.
 
 The flask server needs to be running first before running the CLI.
 
@@ -122,8 +122,7 @@ As a client, I want to be able to make a `GET` request to `/tasks` when there ar
 
 #### Get One Task: One Saved Task
 
-As a client, I want to be able to make a `GET` request to `/tasks/1` when there is at least one saved task and get this response:
-
+As a client, I want to be able to make a `GET` request to `/tasks/1` when there is at least one saved task and get this respons
 `200 OK`
 
 ```json
@@ -192,7 +191,7 @@ The response code should be `404`.
 You may choose the response body.
 
 Make sure to complete the tests for non-existing tasks to check that the correct response body is returned.
- 
+
 
 #### Create a Task: Invalid Task With Missing Data
 

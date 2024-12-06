@@ -1,4 +1,4 @@
-# Optional Enhancements
+dour# Optional Enhancements
 
 ## Goal
 
@@ -42,7 +42,7 @@ Here are some ideas to start:
 - Create a class method in `Task` named `from_json()`
     - Converts JSON into a new instance of `Task`
     - Takes in a dictionary in the shape of the JSON our API receives in the create and update routes
-    - Returns an instance of `Task` 
+    - Returns an instance of `Task`
 
 ### Use List Comprehensions
 
