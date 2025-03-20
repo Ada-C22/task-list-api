@@ -18,7 +18,7 @@ Secondly, we should create our new route, `/goals/<goal_id>/tasks`, so that our 
 
 - Use lesson materials and independent research to review how to set up a one-to-many relationship in Flask.
 - Remember to run `flask db migrate` and `flask db upgrade` whenever there is a change to the model.
-- Pay attention to the exact shape of the expected JSON. Double-check nested data structures and the names of the keys for any mispellings.
+- Pay attention to the exact shape of the expected JSON. Double-check nested data structures and the names of the keys for any misspellings.
 - Use the tests in `tests/test_wave_06.py` to guide your implementation.
 - Some tests use a fixture named `one_task_belongs_to_one_goal` that is defined in `tests/conftest.py`. This fixture saves a task and a goal to the test database, and uses SQLAlchemy to associate the goal and task together.
 

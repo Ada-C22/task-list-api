@@ -55,3 +55,14 @@ This project is designed to fulfill the features described in detail in each wav
 1. [Wave 6: Establishing a one-to-many relationship between two models](ada-project-docs/wave_06.md)
 1. [Wave 7: Deployment](ada-project-docs/wave_07.md)
 1. [Optional Enhancements](ada-project-docs/optional-enhancements.md)
+
+psql -U postgres postgres
+drop database task_list_api_development;
+create database task_list_api_development;
+drop database task_list_api_test;
+create database task_list_api_test;
+\q
+rm -rf migrations
+flask db init
+flask db migrate -m "Recreate model migrations"
+flask db upgrade

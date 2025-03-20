@@ -1,4 +1,5 @@
 import pytest
+from flask import Flask
 from app import create_app
 from app.db import db
 from flask.signals import request_finished
@@ -7,6 +8,7 @@ import os
 from app.models.task import Task
 from app.models.goal import Goal
 from datetime import datetime
+
 
 load_dotenv()
 
