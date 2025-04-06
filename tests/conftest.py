@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 import os
 from app.models.task import Task
 from app.models.goal import Goal
-from datetime import datetime
+from datetime import datetime, timezone
 
 load_dotenv()
 
@@ -77,7 +77,8 @@ def three_tasks(app):
 def completed_task(app):
     new_task = Task(title="Go on my daily walk 🏞", 
                     description="Notice something new every day", 
-                    completed_at=datetime.utcnow())
+                    completed_at=datetime.now(timezone.utc))
+                    # completed_at=datetime.utcnow())
     db.session.add(new_task)
     db.session.commit()
 

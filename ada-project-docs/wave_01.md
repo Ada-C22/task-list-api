@@ -74,16 +74,22 @@ and get this response:
 
 `201 CREATED`
 
-```json
-{
-  "task": {
+
+  {
     "id": 1,
-    "title": "A Brand New Task",
-    "description": "Test Description",
+    "title": "Example Task Title 1",
+    "description": "Example Task Description 1",
+    "is_complete": false
+  },
+  {
+    "id": 2,
+    "title": "Example Task Title 2",
+    "description": "Example Task Description 2",
     "is_complete": false
   }
-}
+]
 ```
+
 
 so that I know I successfully created a Task that is saved in the database.
 
