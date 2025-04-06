@@ -1,14 +1,17 @@
-import pytest
-from app import create_app
-from app.db import db
-from flask.signals import request_finished
-from dotenv import load_dotenv
 import os
-from app.models.task import Task
-from app.models.goal import Goal
 from datetime import datetime
 
+import pytest
+from dotenv import load_dotenv
+from flask.signals import request_finished
+
+from app import create_app
+from app.db import db
+from app.models.goal import Goal
+from app.models.task import Task
+
 load_dotenv()
+
 
 @pytest.fixture
 def app():
@@ -42,8 +45,8 @@ def client(app):
 # This fixture creates a task and saves it in the database
 @pytest.fixture
 def one_task(app):
-    new_task = Task(title="Go on my daily walk 🏞", 
-                    description="Notice something new every day", 
+    new_task = Task(title="Go on my daily walk 🏞",
+                    description="Notice something new every day",
                     completed_at=None)
     db.session.add(new_task)
     db.session.commit()
@@ -56,14 +59,14 @@ def one_task(app):
 @pytest.fixture
 def three_tasks(app):
     db.session.add_all([
-        Task(title="Water the garden 🌷", 
-             description="", 
+        Task(title="Water the garden 🌷",
+             description="",
              completed_at=None),
-        Task(title="Answer forgotten email 📧", 
-             description="", 
+        Task(title="Answer forgotten email 📧",
+             description="",
              completed_at=None),
-        Task(title="Pay my outstanding tickets 😭", 
-             description="", 
+        Task(title="Pay my outstanding tickets 😭",
+             description="",
              completed_at=None)
     ])
     db.session.commit()
@@ -75,8 +78,8 @@ def three_tasks(app):
 # valid completed_at date
 @pytest.fixture
 def completed_task(app):
-    new_task = Task(title="Go on my daily walk 🏞", 
-                    description="Notice something new every day", 
+    new_task = Task(title="Go on my daily walk 🏞",
+                    description="Notice something new every day",
                     completed_at=datetime.utcnow())
     db.session.add(new_task)
     db.session.commit()
